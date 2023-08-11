@@ -1,0 +1,69 @@
+.app__sejarah {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+  
+    @media screen and (min-width: 2000px) {
+      padding: 100px 300px;
+    }
+  }
+  .head-text {
+  padding: 20px;
+  } 
+  
+  .app__profiles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .app__articles,
+    .app__aside {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 20px;
+    }
+  
+    .app__article-item,
+    .app__aside-img {
+      width: 100%;
+    }
+    .app__articles {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center title horizontally */
+      gap: 2rem;
+      
+      @media screen and (min-width: 768px) {
+        align-items: flex-start;
+      }
+  
+      .app__article-item {
+        width: 100%;
+        
+        h2 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .app__aside-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  
+  // Remaining styles...
+  

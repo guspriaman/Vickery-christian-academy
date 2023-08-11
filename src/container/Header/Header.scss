@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+
+  .header__content {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+
+    .header__text {
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      padding: 20px;
+      align-items: flex-start;
+    }
+
+    .header__content {
+      text-align: left;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
