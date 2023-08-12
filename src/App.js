@@ -1,6 +1,6 @@
 import React from 'react';
 // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Header, Footer, About, Admission, Program, Contact, Academic, Graduation } from './container';
+import { Header, Footer, About, Peran, Admission, Program, Contact, Academic, Graduation } from './container';
 import { Navbar } from './components';
 import './App.scss';
 
@@ -9,6 +9,7 @@ const App = () => (
     <Navbar />
     <Header />
     <About />
+    <Peran />
     <Academic />
     <Graduation />
     <Admission />

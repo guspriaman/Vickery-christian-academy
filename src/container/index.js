@@ -6,6 +6,7 @@ import Contact from './Contact/Contact';
 import Graduation from './Graduation/Graduation';
 import Header from './Header/Header';
 import Program from './Program/Program';
+import Peran from './About/Peran';
 import Footer from './Footer/Footer';
 
 export {
@@ -17,5 +18,6 @@ export {
   Graduation,
   Header,
   Program,
+  Peran,
   Footer,
 };

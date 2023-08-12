@@ -4,7 +4,6 @@ import gambar3 from '../assets/gambar-3.jpg';
 import gambar4 from '../assets/gambar-4.jpg';
 import gambar5 from '../assets/gambar-5.jpg';
 import gambar6 from '../assets/gambar-6.jpg';
-
 import about1 from '../assets/about-1.jpg';
 import about2 from '../assets/about-2.jpg';
 import aboutfaqs from '../assets/about-faqs.jpg';
@@ -12,12 +11,13 @@ import abouthomeschooling from '../assets/abouthomeschooling.jpg';
 import aboutuu from '../assets/about-uu.jpg';
 import aboutkids from '../assets/about-kids.jpg';
 import aboutkids1 from '../assets/about-kids1.jpg';
-
 import logo1 from '../assets/logo-1.png';
 import logo from '../assets/logo.png';
 import programdaring from '../assets/program-daring.jpg';
 import programtatapmuka from '../assets/program-tatapmuka.jpg';
 import bg from '../assets/bg-repeat.png';
+import mobileImg from '../assets/mobile.png';
+import emailImg from '../assets/email.png';
 
 export default {
   gambar1,
@@ -38,4 +38,6 @@ export default {
   programtatapmuka,
   programdaring,
   bg,
+  mobileImg,
+  emailImg,
 };

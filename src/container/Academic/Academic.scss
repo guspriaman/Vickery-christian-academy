@@ -1,7 +1,5 @@
 .app__academic {
   background-image: url('/assets/bg-repeat.png'); /* Set your background image path */
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
   padding: 50px 0; /* Adjust padding as needed */
 
@@ -36,7 +34,7 @@
   }
 
   .app__academic-item {
-    width: 190px;
+    width: 90%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -83,7 +81,7 @@
 
   @media screen and (max-width: 2000px) {
     .app__academic-item {
-      width: 370px;
+      width: 70%;
       margin: 2rem 4rem;
 
       h2 {

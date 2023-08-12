@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaMailBulk, FaPhone, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaMailBulk, FaPhone, FaWhatsapp } from 'react-icons/fa';
 import images from '../../constants';
 import './Footer.scss';
 
@@ -15,11 +15,6 @@ const Footer = () => (
       <a href="mailto:VICKERY@VCA.SCH.ID" aria-label="email"><p><FaMailBulk /> VICKERY@VCA.SCH.ID</p></a>
       <a href="tel:+62215724677" aria-label="contact"><p><FaPhone /> +62 215724677</p></a>
       <a href="tel:+628121186777" aria-label="contact"><p><FaWhatsapp /> +62 8121186777</p></a>
-    </section>
-    <section className="footer__mediasosial">
-      <a href="https://www.instagram.com/guspriaman" aria-label="Instagram">
-        <FaInstagram />
-      </a>
     </section>
   </footer>
 );
