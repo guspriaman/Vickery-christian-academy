@@ -41,7 +41,7 @@ const Contact = () => {
 
   return (
     <>
-      <h2 className="head-text">Contact us & chat with me</h2>
+      <h2 className="head-text">Contact us & chat with <span>VICKERY CHRISTIAN ACADEMY</span></h2>
 
       <div className="app__contact-cards">
         <div className="app__contact-card ">
@@ -69,7 +69,7 @@ const Contact = () => {
         </form>
       ) : (
         <div>
-          <h3 className="head-text">Thank you for getting in touch!</h3>
+          <h3 className="head-text">thank you for contacting VICKERY CHRISTIAN ACADEMY.</h3>
         </div>
       )}
     </>

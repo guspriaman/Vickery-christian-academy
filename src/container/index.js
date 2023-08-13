@@ -6,6 +6,7 @@ import Contact from './Contact/Contact';
 import Graduation from './Graduation/Graduation';
 import Header from './Header/Header';
 import Program from './Program/Program';
+import Daring from './Program/Daring';
 import Peran from './About/Peran';
 import Footer from './Footer/Footer';
 
@@ -18,6 +19,7 @@ export {
   Graduation,
   Header,
   Program,
+  Daring,
   Peran,
   Footer,
 };

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
+import { AppWrap, MotionWrap } from '../../wrapper';
 // import { images } from '../../constants';
 import images from '../../constants';
 
@@ -48,4 +49,8 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default AppWrap(
+  MotionWrap(Navbar, 'app__program'),
+  'home',
+);
+

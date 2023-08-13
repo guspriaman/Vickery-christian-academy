@@ -25,9 +25,12 @@
   
       margin: 1rem 0;
       padding: 1rem;
-      border-radius: 10px;
+      border-radius: 5px;
       cursor: pointer;
-      background-color: #abd1c6;
+      background-color: #ed3636;
+      .p-text {
+        color: #ffffff;
+      }
   
       transition: all 0.3s ease-in-out;
   
@@ -59,7 +62,7 @@
   }
   
   .app__contact-cards .app__contact-card:last-child {
-    background-color: #abd1c6;
+    background-color: #ed3636;
   
     &:hover {
       box-shadow: 0 0 25px var(--danger-color);
@@ -98,7 +101,7 @@
       }
   
       &:hover {
-        box-shadow: 0 0 25px #f67575;
+        box-shadow: 0 0 25px #ed3636;
       }
     }
   
@@ -106,8 +109,7 @@
       padding: 1rem 2rem;
       border-radius: 10px;
       border: none;
-      background-color: #b32929;
-  
+      background-color: #ed3636;
       font-weight: 500;
       color: var(--white-color);
       outline: none;
@@ -118,7 +120,7 @@
       cursor: pointer;
   
       &:hover {
-        background-color: #39d26a;
+        background-color: #d29f39;
       }
     }
   

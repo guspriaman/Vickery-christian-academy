@@ -1,98 +1,23 @@
-.app__academic {
-  background-image: url('/assets/bg-repeat.png'); /* Set your background image path */
-  background-position: center;
-  padding: 50px 0; /* Adjust padding as needed */
+.academic-container {
+  padding: 20px;
+  background-image: url('/assets/bg-repeat.png');
+  border: 1px solid #ccc;
+  border-radius: 5px;
 
-  @media screen and (max-width: 768px) {
-    padding: 20px 0; /* Adjust padding for mobile view */
-  }
-
-  .head-text {
-    font-size: 24px;
-    color: #8B4513; /* Brown color */
-    text-align: center;
-
-    span {
-      color: #000; /* Black color */
-    }
-
-    @media screen and (max-width: 768px) {
-      font-size: 20px;
-    }
-  }
-
-  .app__academics {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-
-    @media screen and (max-width: 768px) {
-      margin-top: 1rem;
-    }
-  }
-
-  .app__academic-item {
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
     width: 90%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    margin: 2rem;
-
-    h2 {
-      font-size: 18px;
-      color: #8B4513; /* Brown color */
-      margin-top: 20px;
-
-      @media screen and (max-width: 768px) {
-        font-size: 16px;
-        margin-top: 10px;
-      }
-    }
-
-    .p-text {
-      font-size: 14px;
-      color: #000; /* Black color */
-      margin-top: 10px;
-
-      @media screen and (max-width: 768px) {
-        font-size: 12px;
-        margin-top: 5px;
-      }
-    }
-
-    @media screen and (min-width: 2000px) {
-      width: 370px;
-      margin: 2rem 4rem;
-
-      h2 {
-        font-size: 24px;
-        margin-top: 30px;
-      }
-
-      .p-text {
-        font-size: 18px;
-        margin-top: 15px;
-      }
-    }
+    padding: 10px;
+    margin-left: 30px;
   }
+  h2 {
+  color: #65480f;
+  margin-left: 30px;
 
-  @media screen and (max-width: 2000px) {
-    .app__academic-item {
-      width: 70%;
-      margin: 2rem 4rem;
-
-      h2 {
-        font-size: 24px;
-        margin-top: 30px;
-      }
-
-      .p-text {
-        font-size: 18px;
-        margin-top: 15px;
-      }
+    .academic-title {
+      justify-content: center;
     }
   }
 }

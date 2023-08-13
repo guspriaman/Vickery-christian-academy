@@ -14,10 +14,12 @@ import aboutkids1 from '../assets/about-kids1.jpg';
 import logo1 from '../assets/logo-1.png';
 import logo from '../assets/logo.png';
 import programdaring from '../assets/program-daring.jpg';
-import programtatapmuka from '../assets/program-tatapmuka.jpg';
+import tatapmuka from '../assets/tatapmuka.jpg';
 import bg from '../assets/bg-repeat.png';
 import mobileImg from '../assets/mobile.png';
 import emailImg from '../assets/email.png';
+import daring from '../assets/daring.jpg';
+import daring2 from '../assets/daring2.jpg';
 
 export default {
   gambar1,
@@ -35,9 +37,11 @@ export default {
   aboutuu,
   logo,
   logo1,
-  programtatapmuka,
+  tatapmuka,
   programdaring,
   bg,
   mobileImg,
   emailImg,
+  daring,
+  daring2,
 };

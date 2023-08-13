@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { AppWrap, MotionWrap } from '../../wrapper';
 import './Header.scss';
 import backgroundImage from '../../assets/gambar-2.jpg';
 
@@ -20,4 +21,8 @@ const Header = () => (
   </header>
 );
 
-export default Header;
+export default AppWrap(
+  MotionWrap(Header),
+  'home',
+);
+

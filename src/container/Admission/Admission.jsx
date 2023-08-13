@@ -3,7 +3,7 @@ import './Admission.scss';
 
 const Admission = () => (
   <div className="app">
-    <p>hello work</p>
+    <p>Administrasi</p>
   </div>
 );
 
