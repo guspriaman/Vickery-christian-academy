@@ -53,4 +53,3 @@ export default AppWrap(
   MotionWrap(Navbar, 'app__program'),
   'home',
 );
-

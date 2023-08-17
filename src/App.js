@@ -1,22 +1,19 @@
 import React from 'react';
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Header, Footer, About, Peran, Admission, Program, Daring, Contact, Academic, Graduation } from './container';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components';
 import './App.scss';
+import { Header, About, Footer, Graduation } from './container';
 
 const App = () => (
-  <div className="app">
+  <Router>
     <Navbar />
-    <Header />
-    <About />
-    <Peran />
-    <Academic />
-    <Admission />
-    <Program />
-    <Daring />
-    <Graduation />
-    <Contact />
+    <Routes>
+      <Route path="/" element={<Header />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/graduation" element={<Graduation />} />
+    </Routes>
     <Footer />
-  </div>
+  </Router>
 );
+
 export default App;

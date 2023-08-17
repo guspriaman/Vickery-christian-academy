@@ -23,6 +23,6 @@ const Header = () => (
 
 export default AppWrap(
   MotionWrap(Header),
-  'home',
+  'header',
 );
 

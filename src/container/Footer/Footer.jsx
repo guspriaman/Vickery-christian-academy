@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaMailBulk, FaPhone, FaWhatsapp } from 'react-icons/fa';
+import { AppWrap, MotionWrap } from '../../wrapper';
 import images from '../../constants';
 import './Footer.scss';
 
@@ -19,4 +20,7 @@ const Footer = () => (
   </footer>
 );
 
-export default Footer;
+export default AppWrap(
+  MotionWrap(Footer, 'app__footer'),
+  'footer',
+);

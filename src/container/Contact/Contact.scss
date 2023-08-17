@@ -27,7 +27,7 @@
       padding: 1rem;
       border-radius: 5px;
       cursor: pointer;
-      background-color: #ed3636;
+      background-color: #4E6C50;
       .p-text {
         color: #ffffff;
       }
@@ -62,7 +62,7 @@
   }
   
   .app__contact-cards .app__contact-card:last-child {
-    background-color: #ed3636;
+    background-color: #4E6C50;
   
     &:hover {
       box-shadow: 0 0 25px var(--danger-color);
@@ -101,7 +101,7 @@
       }
   
       &:hover {
-        box-shadow: 0 0 25px #ed3636;
+        box-shadow: 0 0 25px #4E6C50;
       }
     }
   
@@ -109,7 +109,7 @@
       padding: 1rem 2rem;
       border-radius: 10px;
       border: none;
-      background-color: #ed3636;
+      background-color: #4E6C50;
       font-weight: 500;
       color: var(--white-color);
       outline: none;

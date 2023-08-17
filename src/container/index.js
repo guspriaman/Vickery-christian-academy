@@ -1,9 +1,15 @@
 import About from './About/About';
-import Sejarah from './Sejarah/Sejarah';
+import History from './About/History';
+import Visi from './About/Visi';
+import Misi from './About/Misi';
+import Kegiatan from './About/Kegiatan';
 import Academic from './Academic/Academic';
-import Admission from './Admission/Admission';
 import Contact from './Contact/Contact';
 import Graduation from './Graduation/Graduation';
+import Graduationelementary from './Graduation/Graduationelementary';
+import Graduationjunior from './Graduation/Graduationjunior';
+import Graduationsenior from './Graduation/Graduationsenior';
+import Teacher from './Graduation/Teacher';
 import Header from './Header/Header';
 import Program from './Program/Program';
 import Daring from './Program/Daring';
@@ -12,11 +18,17 @@ import Footer from './Footer/Footer';
 
 export {
   About,
-  Sejarah,
+  History,
+  Visi,
+  Misi,
+  Kegiatan,
   Academic,
-  Admission,
   Contact,
   Graduation,
+  Graduationelementary,
+  Graduationjunior,
+  Graduationsenior,
+  Teacher,
   Header,
   Program,
   Daring,
