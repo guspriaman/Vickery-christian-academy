@@ -1,0 +1,93 @@
+/* Styling for the main heading */
+.head-text {
+    text-align: center;
+    margin-bottom: 2rem;
+  
+    span {
+      color: #8B4513; /* Dark brown color */
+    }
+  }
+  
+  /* Styling for the entire history section */
+  .app__visi {
+    padding: 2rem;
+    background-image: url('/assets/bg-repeat.png');
+  
+    @media screen and (min-width: 768px) {
+      padding: 4rem;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      padding: 6rem;
+    }
+  }
+  
+  /* Styling for each section */
+  .app__section {
+    margin-bottom: 3rem;
+  
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      padding: 10px;
+    }
+  }
+  
+  /* Styling for article items */
+  .app__articles {
+    @media screen and (min-width: 768px) {
+      flex: 2;
+      padding: 2rem;
+    }
+  }
+  
+  /* Styling for aside images */
+  .app__aside {
+    @media screen and (min-width: 768px) {
+      flex: 1;
+      padding-left: 2rem;
+      padding: 10px;
+      margin: 0 0 5px 5px;
+      border-radius: 15px;
+    }
+  }
+  
+  /* Styling for individual article item */
+  .app__article-item {
+    margin-bottom: 2rem;
+    
+    @media screen and (max-width: 767px) {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Styling for individual aside image */
+  .app__aside-img {
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
+      padding: 15px;
+      margin: 2rem;
+    }
+  }
+  
+  /* Styling for mobile view */
+  @media screen and (max-width: 767px) {
+    .app__section {
+      flex-direction: column;
+      padding: 10px;
+    }
+    .app__articles, .app__aside {
+      padding: 15px;
+      margin: 5px;
+      border-radius: 15px;
+    }
+  
+    .app__article-item {
+      margin-bottom: 1rem;
+    }
+  }
+  
