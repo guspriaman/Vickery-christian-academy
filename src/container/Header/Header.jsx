@@ -14,8 +14,9 @@ const Header = () => (
         transition={{ duration: 0.5 }}
         className="header__text"
       >
-        <h1>Welcome to Our Website</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Jadi akhirnya, saudara-saudara, semua yang benar, semua yang mulia, semua yang adil, semua yang suci, </p>
+        <p>semua yang manis, semua yang sedap didengar, semua yang disebut kebajikan dan patut dipuji, pikirkanlah semuanya itu.</p>
+        <p>Filipi 4:8-9</p>
       </motion.div>
     </div>
   </header>
