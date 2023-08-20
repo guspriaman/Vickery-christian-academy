@@ -6,16 +6,15 @@ import './Dropdown.scss';
 function Programdown() {
   const [click, setClick] = useState(false);
 
-  const handleClick = () => setClick(!click);
-
   return (
     <ul className={click ? 'dropdown-menu clicked' : 'dropdown-menu'}>
       {Programitems.map((item, index) => (
-        <li
-          key={index}
-          onClick={() => setClick(false)} // Pindahkan event handler ke elemen <li>
-        >
-          <Link className={item.cName} to={item.path}>
+        <li key={index}>
+          <Link
+            className={item.cName}
+            to={item.path}
+            onClick={() => setClick(false)} // Pindahkan event handler ke elemen <Link>
+          >
             {item.title}
           </Link>
         </li>

@@ -101,7 +101,8 @@ const Navbar = () => {
           </Link>
           {graduationdrop && <Graduationdrop />}
         </li>
-        <li className="nav-item"
+        <li
+          className="nav-item"
           onMouseEnter={onProgramMouseEnter}
           onMouseLeave={onProgramMouseLeave}
         >
