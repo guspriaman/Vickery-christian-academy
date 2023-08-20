@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import './About.scss';
+import './Faqs.scss';
 import { urlFor, client } from '../../client';
 
 const Article = ({ title, description }) => (
@@ -27,48 +27,48 @@ const AsideImage = ({ imgUrl, alt }) => (
   </motion.div>
 );
 
-const About = () => {
-  const [abouts, setAbouts] = useState([]);
+const Faqs = () => {
+  const [faqss, setFaqss] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "abouts"]';
+    const query = '*[_type == "faqss"]';
 
     client.fetch(query).then((data) => {
-      setAbouts(data);
+      setFaqss(data);
     });
   }, []);
 
   return (
-    <div className="about">
+    <>
       <h2 className="head-text">VICKERY CHRISTIAN ACADEMY </h2>
       <section>
         <div className="app__profiles">
           <div className="app__aside">
-            {abouts.map((about, index) => (
+            {faqss.map((faqs, index) => (
               <AsideImage
-                key={about.title + index}
-                imgUrl={about.imgUrl}
-                alt={about.title}
+                key={faqs.title + index}
+                imgUrl={faqs.imgUrl}
+                alt={faqs.title}
               />
             ))}
           </div>
           <div className="app__articles">
-            {abouts.map((about, index) => (
+            {faqss.map((faqs, index) => (
               <Article
-                key={about.title + index}
-                title={about.title}
-                description={about.description}
+                key={faqs.title + index}
+                title={faqs.title}
+                description={faqs.description}
               />
             ))}
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
 export default AppWrap(
-  MotionWrap(About, 'app__about'),
-  'about',
+  MotionWrap(Faqs, 'app__faqs'),
+  'faqs',
   'app__whitebg',
 );

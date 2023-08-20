@@ -1,0 +1,56 @@
+/* Negara.scss */
+
+.keluarga-container {
+  padding-top: 90px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.head-text {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.app__keluarga {
+  display: flex;
+  flex-direction: column;
+  
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  
+  .anside {
+    padding: 10px;
+    margin: 20px;
+    color: #ffffff;
+    flex: 1;
+
+    &:hover {
+      color: var(--gold-color);
+    }
+    
+    @media screen and (min-width: 768px) {
+      flex: 0.3;
+    }
+  }
+  
+  .articel {
+    padding: 10px;
+    margin: 20px;
+    background-color: #ffffff;
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+/* Add more responsive styles as needed */

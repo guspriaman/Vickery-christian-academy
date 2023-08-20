@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <div className="contact">
       <h2 className="head-text">Contact us & chat with <span>VICKERY CHRISTIAN ACADEMY</span></h2>
 
       <div className="app__contact-cards">
@@ -72,7 +72,7 @@ const Contact = () => {
           <h3 className="head-text">thank you for contacting VICKERY CHRISTIAN ACADEMY.</h3>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

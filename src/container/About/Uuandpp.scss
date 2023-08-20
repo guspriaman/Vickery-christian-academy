@@ -1,0 +1,54 @@
+
+.uuandpp-container {
+  padding-top: 80px;
+  background-image: url('/assets/bg-repeat.png');
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  
+  p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      width: 90%; /* Full width */
+      padding: 10px;
+      margin: 10px 0;
+      margin-left: 40px;
+  }
+  
+  h2 {
+      color: #65480f;
+      padding: 10px;
+      margin-left: 30px;
+      display: flex;
+      align-items: center;
+
+  }
+
+  h3,
+  h4 {
+      color: #65480f;
+      padding: 10px;
+      margin-left: 30px;
+  }
+
+  .head-text {
+      justify-content: center;
+  }
+  .img-uuandpp {
+      text-align: center;
+      
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+    
+      p {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    }
+}

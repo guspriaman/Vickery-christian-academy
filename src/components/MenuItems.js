@@ -1,22 +1,32 @@
 export const MenuItems = [
   {
-    title: 'Marketing',
-    path: '/marketing',
+    title: 'History',
+    path: '/history',
     cName: 'dropdown-link',
   },
   {
-    title: 'Consulting',
-    path: '/consulting',
+    title: 'YAYASAN VCA',
+    path: '/yayasan',
     cName: 'dropdown-link',
   },
   {
-    title: 'Design',
-    path: '/design',
+    title: 'UU & PP',
+    path: '/uuandpp',
     cName: 'dropdown-link',
   },
   {
-    title: 'Development',
-    path: '/development',
+    title: 'CLASSICAL CE',
+    path: '/ccs',
+    cName: 'dropdown-link',
+  },
+  {
+    title: 'FAQS',
+    path: '/faqs',
+    cName: 'dropdown-link',
+  },
+  {
+    title: 'HOMESCHOOLING',
+    path: '/homeschooling',
     cName: 'dropdown-link',
   },
 ];

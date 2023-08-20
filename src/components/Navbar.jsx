@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
+import { HiMenuAlt4, HiX } from 'react-icons/hi';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import Button from './Button'; // Memindahkan impor ini ke atas impor './Dropdown'
+import Button from './Button';
 import Dropdown from './Dropdown';
+import Graduationdrop from './Graduationdrop';
+import Programdown from './Programdown';
+import imagess from './imagess';
 import './Navbar.scss';
 
-function Navbar() {
+const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const [graduationdrop, setGraduationdrop] = useState(false);
+  const [programdown, setProgramdown] = useState(false);
 
-  const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const onMouseEnter = () => {
+  const onServicesMouseEnter = () => {
     if (window.innerWidth < 960) {
       setDropdown(false);
     } else {
@@ -19,7 +26,7 @@ function Navbar() {
     }
   };
 
-  const onMouseLeave = () => {
+  const onServicesMouseLeave = () => {
     if (window.innerWidth < 960) {
       setDropdown(false);
     } else {
@@ -27,66 +34,113 @@ function Navbar() {
     }
   };
 
+  const onGraduationMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setGraduationdrop(false);
+    } else {
+      setGraduationdrop(true);
+    }
+  };
+
+  const onGraduationMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setGraduationdrop(false);
+    } else {
+      setGraduationdrop(false);
+    }
+  };
+  const onProgramMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setProgramdown(false);
+    } else {
+      setProgramdown(true);
+    }
+  };
+
+  const onProgramMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setProgramdown(false);
+    } else {
+      setProgramdown(false);
+    }
+  };
+
   return (
-    <nav className='navbar'>
-      <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-        EPIC
-        <i className='fab fa-firstdraft' />
-      </Link>
-      <div className='menu-icon' onClick={handleClick}>
-        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+    <nav className="app__navbar">
+      <div className="app__navbar-logo">
+        <img src={imagess.logo} alt="logo" />
       </div>
-      <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-        <li className='nav-item'>
-          <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+      <ul className={click ? 'app__navbar-links active' : 'app__navbar-links'}>
+        <li className="nav-item">
+          <Link to="/" className="nav-links" onClick={closeMobileMenu}>
             Home
           </Link>
         </li>
         <li
-          className='nav-item'
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
+          className="nav-item"
+          onMouseEnter={onServicesMouseEnter}
+          onMouseLeave={onServicesMouseLeave}
         >
-          <Link
-            to='/about'
-            className='nav-links'
-            onClick={closeMobileMenu}
-          >
-            About <i className='fas fa-caret-down' />
+          <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+            About <i className="fas fa-caret-down" />
           </Link>
           {dropdown && <Dropdown />}
         </li>
-        <li className='nav-item'>
-          <Link
-            to='/graduation'
-            className='nav-links'
-            onClick={closeMobileMenu}
-          >
-            Graduation
+        <li className="nav-item">
+          <Link to="/admission" className="nav-links" onClick={closeMobileMenu}>
+            Admission
           </Link>
         </li>
-        <li className='nav-item'>
-          <Link
-            to='/contact'
-            className='nav-links'
-            onClick={closeMobileMenu}
-          >
+        <li
+          className="nav-item"
+          onMouseEnter={onGraduationMouseEnter}
+          onMouseLeave={onGraduationMouseLeave}
+        >
+          <Link to="/graduation" className="nav-links" onClick={closeMobileMenu}>
+            Graduation <i className="fas fa-caret-down" />
+          </Link>
+          {graduationdrop && <Graduationdrop />}
+        </li>
+        <li className="nav-item"
+          onMouseEnter={onProgramMouseEnter}
+          onMouseLeave={onProgramMouseLeave}
+        >
+          <Link to="/program" className="nav-links" onClick={closeMobileMenu}>
+            Program <i className="fas fa-caret-down" />
+          </Link>
+          {programdown && <Programdown />}
+        </li>
+        <li>
+          <Link to="/contact" className="nav-links-mobile" onClick={closeMobileMenu}>
             Contact Us
           </Link>
         </li>
-        <li>
-          <Link
-            to='/sign-up'
-            className='nav-links-mobile'
-            onClick={closeMobileMenu}
-          >
-            Sign Up
-          </Link>
-        </li>
       </ul>
-      <Button />
+      <div>
+        <Button />
+      </div>
+      <div className="app__navbar-menu">
+        <HiMenuAlt4 onClick={() => setToggle(true)} />
+        {toggle && (
+          <motion.div
+            whileInView={{ x: [300, 0] }}
+            transition={{ duration: 0.85, ease: 'easeOut' }}
+          >
+            <HiX onClick={() => setToggle(false)} />
+            <ul>
+              {['home', 'about', 'admission', 'program', 'Graduation', 'contact'].map((item) => (
+                <li key={item}>
+                  <a href={`/${item}`} onClick={() => setToggle(false)}>
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

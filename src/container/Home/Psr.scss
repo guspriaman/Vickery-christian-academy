@@ -1,0 +1,50 @@
+/* psr.scss */
+
+.psr-container {
+  padding-top: 90px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.head-text {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.app__psr {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .anside {
+    padding: 10px;
+    color: #ffffff;
+    flex: 1;
+
+    @media screen and (min-width: 768px) {
+      flex: 0.3;
+    }
+  }
+
+  .artikel {
+    padding: 10px;
+    background-color: #ffffff;
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+/* Add more responsive styles as needed */

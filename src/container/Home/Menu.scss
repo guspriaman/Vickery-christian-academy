@@ -1,4 +1,5 @@
-.dropdown-menu {
+.m-menu {
+  padding-top: 100px;
   background: #b00707;
   width: 200px;
   position: absolute;
@@ -8,21 +9,21 @@
   border-radius: 0 0 15px 15px;
 }
 
-.dropdown-menu li {
+.m-menu li {
   border-radius: 15px;
   cursor: pointer;
 }
 
-.dropdown-menu li:hover {
+.m-menu li:hover {
   border-radius: 15px;
   color: #a27607;
 }
 
-.dropdown-menu.clicked {
+.m-menu.clicked {
   display: none;
 }
 
-.dropdown-link {
+.m-link {
   display: block;
   height: 100%;
   width: 100%;
@@ -34,5 +35,10 @@
 @media screen and (max-width: 960px) {
   .fa-caret-down {
     display: none;
+  }
+  
+  .m-menu {
+    display: none;
+    top: 60px; /* Sesuaikan posisi menu di layar kecil */
   }
 }

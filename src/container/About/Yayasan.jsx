@@ -1,7 +1,8 @@
+// Yayasan.jsx
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import './About.scss';
+import './Yayasan.scss';
 import { urlFor, client } from '../../client';
 
 const Article = ({ title, description }) => (
@@ -27,37 +28,37 @@ const AsideImage = ({ imgUrl, alt }) => (
   </motion.div>
 );
 
-const About = () => {
-  const [abouts, setAbouts] = useState([]);
+const Yayasan = () => {
+  const [yayasans, setYayasans] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "abouts"]';
+    const query = '*[_type == "yayasans"]';
 
     client.fetch(query).then((data) => {
-      setAbouts(data);
+      setYayasans(data);
     });
   }, []);
 
   return (
-    <div className="about">
-      <h2 className="head-text">VICKERY CHRISTIAN ACADEMY </h2>
+    <div className="yayasan">
+      <h2 className="head-text">YAYASAN VICKERY CHRISTIAN ACADEMY </h2>
       <section>
         <div className="app__profiles">
-          <div className="app__aside">
-            {abouts.map((about, index) => (
-              <AsideImage
-                key={about.title + index}
-                imgUrl={about.imgUrl}
-                alt={about.title}
+          <div className="app__articles">
+            {yayasans.map((yayasan, index) => (
+              <Article
+                key={yayasan.title + index}
+                title={yayasan.title}
+                description={yayasan.description}
               />
             ))}
           </div>
-          <div className="app__articles">
-            {abouts.map((about, index) => (
-              <Article
-                key={about.title + index}
-                title={about.title}
-                description={about.description}
+          <div className="app__aside">
+            {yayasans.map((yayasan, index) => (
+              <AsideImage
+                key={yayasan.title + index}
+                imgUrl={yayasan.imgUrl}
+                alt={yayasan.title}
               />
             ))}
           </div>
@@ -68,7 +69,7 @@ const About = () => {
 };
 
 export default AppWrap(
-  MotionWrap(About, 'app__about'),
-  'about',
+  MotionWrap(Yayasan, 'app__yayasan'),
+  'yayasan',
   'app__whitebg',
 );

@@ -20,6 +20,9 @@ import mobileImg from '../assets/mobile.png';
 import emailImg from '../assets/email.png';
 import daring from '../assets/daring.jpg';
 import daring2 from '../assets/daring2.jpg';
+import hukum from '../assets/hukum.jpg';
+import negara from '../assets/negara.jpg';
+import psr from '../assets/psr.jpg';
 
 export default {
   gambar1,
@@ -44,4 +47,7 @@ export default {
   emailImg,
   daring,
   daring2,
+  hukum,
+  negara,
+  psr,
 };
