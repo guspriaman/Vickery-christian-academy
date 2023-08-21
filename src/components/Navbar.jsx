@@ -91,6 +91,11 @@ const Navbar = () => {
             Admission
           </Link>
         </li>
+        <li className="nav-item">
+          <Link to="/academic" className="nav-links" onClick={closeMobileMenu}>
+            Academic
+          </Link>
+        </li>
         <li
           className="nav-item"
           onMouseEnter={onGraduationMouseEnter}
@@ -129,7 +134,7 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {['home', 'about', 'admission', 'program', 'Graduation', 'contact'].map((item) => (
+              {['about', 'admission', 'academic', 'program', 'Graduation', 'contact'].map((item) => (
                 <li key={item}>
                   <a href={`/${item}`} onClick={() => setToggle(false)}>
                     {item}

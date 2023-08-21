@@ -13,6 +13,7 @@ import {
   Uuandpp,
   Yayasan,
   Ccs,
+  Admission,
   Academic,
   Contact,
   Keluarga,
@@ -47,6 +48,7 @@ const App = () => (
       <Route path="/ccs" element={<Ccs />} />
       <Route path="/yayasan" element={<Yayasan />} />
       <Route path="/Academic" element={<Academic />} />
+      <Route path="/Admission" element={<Admission />} />
       <Route path="/graduation" element={<Graduation />} />
       <Route path="/graduationelementary" element={<Graduationelementary />} />
       <Route path="/graduationjunior" element={<Graduationjunior />} />

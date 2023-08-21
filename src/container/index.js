@@ -9,6 +9,7 @@ import Homeschooling from './Home/Homeschooling';
 import Uuandpp from './About/Uuandpp';
 import Faqs from './About/Faqs';
 import Academic from './Academic/Academic';
+import Admission from './Admission/Admission';
 import Contact from './Contact/Contact';
 import Keluarga from './Home/Keluarga';
 import Negara from './Home/Negara';
@@ -37,6 +38,7 @@ export {
   Ccs,
   Faqs,
   Academic,
+  Admission,
   Contact,
   Keluarga,
   Negara,
