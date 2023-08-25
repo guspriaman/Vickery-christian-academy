@@ -1,10 +1,5 @@
 export const MenuItems = [
   {
-    title: 'History',
-    path: '/history',
-    cName: 'dropdown-link',
-  },
-  {
     title: 'YAYASAN VCA',
     path: '/yayasan',
     cName: 'dropdown-link',

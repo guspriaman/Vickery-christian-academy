@@ -1,0 +1,45 @@
+.m-vsc {
+  padding-top: 100px;
+  width: 200px;
+  position: absolute;
+  top: 80px;
+  list-style: none;
+  text-align: start;
+  border-radius: 0 0 15px 15px;
+}
+
+.m-vsc li {
+  background: #05515b;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.m-vsc li:hover {
+  background: #b00707;
+  border-radius: 15px;
+}
+
+.m-vsc.clicked {
+  display: none;
+}
+
+.m-link {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  padding: 16px;
+}
+
+@media screen and (max-width: 960px) {
+  .fa-caret-down {
+    display: none;
+  }
+  
+  .m-vsc {
+    display: none;
+    top: 60px; /* Sesuaikan posisi vsc di layar kecil */
+  }
+}

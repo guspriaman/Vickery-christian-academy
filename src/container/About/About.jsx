@@ -40,7 +40,7 @@ const About = () => {
 
   return (
     <div className="about">
-      <h2 className="head-text">VICKERY CHRISTIAN ACADEMY </h2>
+      <h2 className="head-text-about">VICKERY CHRISTIAN ACADEMY </h2>
       <section>
         <div className="app__profiles">
           <div className="app__aside">

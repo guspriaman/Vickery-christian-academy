@@ -1,42 +1,11 @@
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  width: 100%;
+  height: 100vh; /* Menggunakan 100vh untuk mengisi tinggi viewport */
   background-size: cover;
   background-position: center;
-  color: #fff;
-
-  .header__content {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-
-    .header__text {
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-      }
-
-      p {
-        font-size: 1.2rem;
-        margin: 10px;
-        margin-left: 20px;
-      }
-    }
-  }
+  transition: background-image 0.5s ease-in-out;
 
   @media (max-width: 768px) {
-    .header {
-      padding: 20px;
-      align-items: flex-start;
-    }
-
-    .header__content {
-      text-align: left;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.7);
-    }
+    height: 50vh; /* Mengurangi tinggi header untuk tampilan tablet */
   }
 }

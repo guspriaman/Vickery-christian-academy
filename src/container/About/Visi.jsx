@@ -1,29 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import './Visi.scss';
 import { urlFor, client } from '../../client';
+import Vsc from '../Home/Vsc';
+import './Visi.scss';
 
-const Article = ({ title, description }) => (
+const AsideImage = ({ title, imgUrl, alt, description }) => (
   <motion.div
     whileInView={{ opacity: 1 }}
     whileHover={{ scale: 1.1 }}
     transition={{ duration: 0.5, type: 'tween' }}
-    className="app__article-item"
+    className="visi__aside-img"
   >
     <h2 className="bold-text" style={{ marginBottom: 20 }}>{title}</h2>
-    <p className="p-text">{description}</p>
-  </motion.div>
-);
-
-const AsideImage = ({ imgUrl, alt }) => (
-  <motion.div
-    whileInView={{ opacity: 1 }}
-    whileHover={{ scale: 1.1 }}
-    transition={{ duration: 0.5, type: 'tween' }}
-    className="app__aside-img"
-  >
     <img src={urlFor(imgUrl)} alt={alt} />
+    <p className="p-text">{description}</p>
   </motion.div>
 );
 
@@ -39,31 +30,27 @@ const Visi = () => {
   }, []);
 
   return (
-    <>
-      <h2 className="head-text"> VISI <span> VICKERY CHRISTIAN ACADEMY</span></h2>
+    <div className="visi-container">
+      <h2 className="head-text-visi"> VISI <span> VICKERY CHRISTIAN ACADEMY</span></h2>
       <section>
-        <div className="app__profiles">
-          <div className="app__aside">
+        <div className="app__visi">
+          <div className="anside">
+            <Vsc />
+          </div>
+          <div className="artikel">
             {visis.map((visi, index) => (
               <AsideImage
-                key={visi.title + index}
+                key={visi.title + index} // Use a unique identifier from your data
+                title={visi.title}
                 imgUrl={visi.imgUrl}
                 alt={visi.title}
-              />
-            ))}
-          </div>
-          <div className="app__articles">
-            {visis.map((visi, index) => (
-              <Article
-                key={visi.title + index}
-                title={visi.title}
                 description={visi.description}
               />
             ))}
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

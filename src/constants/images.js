@@ -23,6 +23,10 @@ import daring2 from '../assets/daring2.jpg';
 import hukum from '../assets/hukum.jpg';
 import negara from '../assets/negara.jpg';
 import psr from '../assets/psr.jpg';
+import bg1 from '../assets/2.png';
+import bg2 from '../assets/3.png';
+import bg3 from '../assets/4.png';
+import bg4 from '../assets/1.png';
 
 export default {
   gambar1,
@@ -50,4 +54,8 @@ export default {
   hukum,
   negara,
   psr,
+  bg1,
+  bg2,
+  bg3,
+  bg4,
 };

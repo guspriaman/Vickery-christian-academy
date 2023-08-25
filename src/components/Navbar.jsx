@@ -112,7 +112,7 @@ const Navbar = () => {
           onMouseLeave={onProgramMouseLeave}
         >
           <Link to="/program" className="nav-links" onClick={closeMobileMenu}>
-            Program <i className="fas fa-caret-down" />
+            Program<i className="fas fa-caret-down" />
           </Link>
           {programdown && <Programdown />}
         </li>
@@ -133,14 +133,77 @@ const Navbar = () => {
             transition={{ duration: 0.85, ease: 'easeOut' }}
           >
             <HiX onClick={() => setToggle(false)} />
-            <ul>
-              {['about', 'admission', 'academic', 'program', 'Graduation', 'contact'].map((item) => (
-                <li key={item}>
-                  <a href={`/${item}`} onClick={() => setToggle(false)}>
-                    {item}
-                  </a>
-                </li>
-              ))}
+            <ul className={click ? 'app__navbar-links active' : 'app__navbar-links'}>
+              <li className="nav-item">
+                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                  Home
+                </Link>
+              </li>
+              <li
+                className="nav-item"
+                onMouseEnter={onServicesMouseEnter}
+                onMouseLeave={onServicesMouseLeave}
+              >
+                <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+                  About <i className="fas fa-caret-down" />
+                </Link>
+                {dropdown && <Dropdown />}
+              </li>
+              <li className="nav-item">
+                <Link to="/yayasan" className="nav-links" onClick={closeMobileMenu}>
+                  Yayasan
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/visi" className="nav-links" onClick={closeMobileMenu}>
+                  Visi
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/misi" className="nav-links" onClick={closeMobileMenu}>
+                  Misi
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Homeschooling" className="nav-links" onClick={closeMobileMenu}>
+                  Homeschooling
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Uuandpp" className="nav-links" onClick={closeMobileMenu}>
+                  UU & PP
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/ccs" className="nav-links" onClick={closeMobileMenu}>
+                  Classical Christian Education
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/admission" className="nav-links" onClick={closeMobileMenu}>
+                  Admission
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/academic" className="nav-links" onClick={closeMobileMenu}>
+                  Academic
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/program" className="nav-links" onClick={closeMobileMenu}>
+                  Offline School
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/daring" className="nav-links" onClick={closeMobileMenu}>
+                  Online School
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="nav-links-mobile" onClick={closeMobileMenu}>
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </motion.div>
         )}

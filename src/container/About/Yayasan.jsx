@@ -1,30 +1,20 @@
-// Yayasan.jsx
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import './Yayasan.scss';
 import { urlFor, client } from '../../client';
+import Vsc from '../Home/Vsc';
+import './Yayasan.scss';
 
-const Article = ({ title, description }) => (
+const AsideImage = ({ title, imgUrl, alt, description }) => (
   <motion.div
     whileInView={{ opacity: 1 }}
     whileHover={{ scale: 1.1 }}
     transition={{ duration: 0.5, type: 'tween' }}
-    className="app__article-item"
+    className="yayasan__aside-img"
   >
     <h2 className="bold-text" style={{ marginBottom: 20 }}>{title}</h2>
-    <p className="p-text">{description}</p>
-  </motion.div>
-);
-
-const AsideImage = ({ imgUrl, alt }) => (
-  <motion.div
-    whileInView={{ opacity: 1 }}
-    whileHover={{ scale: 1.1 }}
-    transition={{ duration: 0.5, type: 'tween' }}
-    className="app__aside-img"
-  >
     <img src={urlFor(imgUrl)} alt={alt} />
+    <p className="p-text">{description}</p>
   </motion.div>
 );
 
@@ -40,25 +30,21 @@ const Yayasan = () => {
   }, []);
 
   return (
-    <div className="yayasan">
-      <h2 className="head-text">YAYASAN VICKERY CHRISTIAN ACADEMY </h2>
+    <div className="yayasan-container">
+      <h2 className="head-text-yayasan"> yayasan <span> VICKERY CHRISTIAN ACADEMY</span></h2>
       <section>
-        <div className="app__profiles">
-          <div className="app__articles">
-            {yayasans.map((yayasan, index) => (
-              <Article
-                key={yayasan.title + index}
-                title={yayasan.title}
-                description={yayasan.description}
-              />
-            ))}
+        <div className="app__yayasan">
+          <div className="anside">
+            <Vsc />
           </div>
-          <div className="app__aside">
+          <div className="artikel">
             {yayasans.map((yayasan, index) => (
               <AsideImage
-                key={yayasan.title + index}
+                key={yayasan.title + index} // Use a unique identifier from your data
+                title={yayasan.title}
                 imgUrl={yayasan.imgUrl}
                 alt={yayasan.title}
+                description={yayasan.description}
               />
             ))}
           </div>

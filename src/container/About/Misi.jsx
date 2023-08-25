@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import Vsc from '../Home/Vsc';
 import './Misi.scss';
 import { urlFor, client } from '../../client';
 
@@ -39,33 +40,38 @@ const Misi = () => {
   }, []);
 
   return (
-    <>
-      <h2 className="head-text"> MISI <span> VICKERY CHRISTIAN ACADEMY</span></h2>
+    <div className="misi-container">
+      <h2 className="head-text-misi"> MISI <span> VICKERY CHRISTIAN ACADEMY</span></h2>
       <section>
-        <div className="app__profiles">
-          <div className="app__aside">
-            {misis.map((misi, index) => (
-              <AsideImage
-                key={misi.title + index}
-                imgUrl={misi.imgUrl}
-                alt={misi.title}
-              />
-            ))}
+        <div className="app__misi">
+          <div className="anside">
+            <Vsc />
           </div>
-          <div className="app__articles">
-            {misis.map((misi, index) => (
-              <Article
-                key={misi.title + index}
-                title={misi.title}
-                description={misi.description}
-              />
-            ))}
+          <div className="artikel">
+            <div>
+              {misis.map((misi, index) => (
+                <AsideImage
+                  key={misi.title + index}
+                  imgUrl={misi.imgUrl}
+                  alt={misi.title}
+                />
+              ))}
+            </div>
+            <div>
+              {misis.map((misi, index) => (
+                <Article
+                  key={misi.title + index}
+                  title={misi.title}
+                  description={misi.description}
+                />
+              ))}
+            </div>
           </div>
         </div>
         <h3>Roma 12:1-2</h3>
         <p>Karena itu, saudara-saudara, demi kemurahan Allah aku menasihatkan kamu, supaya kamu mempersembahkan tubuhmu sebagai persembahan yang hidup, yang kudus dan yang berkenan kepada Allah: itu adalah ibadahmu yang sejati. Janganlah kamu menjadi serupa dengan dunia ini, tetapi berubahlah oleh pembaharuan budimu, sehingga kamu dapat membedakan manakah kehendak Allah: apa yang baik, yang berkenan kepada Allah dan yang sempurna</p>
       </section>
-    </>
+    </div>
   );
 };
 

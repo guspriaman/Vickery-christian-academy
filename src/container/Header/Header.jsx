@@ -1,29 +1,41 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { AppWrap, MotionWrap } from '../../wrapper';
+import React, { Component } from 'react';
 import './Header.scss';
-import backgroundImage from '../../assets/gambar-2.jpg';
+import bg1 from '../../assets/2.png';
+import bg2 from '../../assets/3.png';
+import bg3 from '../../assets/4.png';
+import bg4 from '../../assets/1.png';
 
-const Header = () => (
-  <header className="header" style={{ backgroundImage: `url(${backgroundImage})` }}>
-    <div className="header__content">
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        transition={{ duration: 0.5 }}
-        className="header__text"
-      >
-        <p>Jadi akhirnya, saudara-saudara, semua yang benar, semua yang mulia, semua yang adil, semua yang suci, </p>
-        <p>semua yang manis, semua yang sedap didengar, semua yang disebut kebajikan dan patut dipuji, pikirkanlah semuanya itu.</p>
-        <p>Filipi 4:8-9</p>
-      </motion.div>
-    </div>
-  </header>
-);
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentBackground: 0,
+      backgrounds: [bg1, bg2, bg3, bg4],
+    };
+  }
 
-export default AppWrap(
-  MotionWrap(Header),
-  'header',
-);
+  componentDidMount() {
+    this.backgroundInterval = setInterval(this.changeBackground, 5000);
+  }
 
+  componentWillUnmount() {
+    clearInterval(this.backgroundInterval);
+  }
+
+  changeBackground = () => {
+    const { currentBackground, backgrounds } = this.state;
+    const nextBackground = (currentBackground + 1) % backgrounds.length;
+    this.setState({ currentBackground: nextBackground });
+  };
+
+  render() {
+    const { currentBackground, backgrounds } = this.state;
+    return (
+      <header className="header" style={{ backgroundImage: `url(${backgrounds[currentBackground]})` }}>
+        {/* Your header content here */}
+      </header>
+    );
+  }
+}
+
+export default Header;
