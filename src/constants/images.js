@@ -3,7 +3,6 @@ import gambar2 from '../assets/gambar-2.jpg';
 import gambar3 from '../assets/gambar-3.jpg';
 import gambar4 from '../assets/gambar-4.jpg';
 import gambar5 from '../assets/gambar-5.jpg';
-import gambar6 from '../assets/gambar-6.jpg';
 import about1 from '../assets/about-1.jpg';
 import about2 from '../assets/about-2.jpg';
 import aboutfaqs from '../assets/about-faqs.jpg';
@@ -34,7 +33,6 @@ export default {
   gambar3,
   gambar4,
   gambar5,
-  gambar6,
   about1,
   about2,
   aboutfaqs,

@@ -1,14 +1,17 @@
 import React from 'react';
 import './Button.scss';
-import { Link } from 'react-router-dom';
 
 function Button() {
+  function handleSignUpClick() {
+    window.open('https://backend-vickery.guspriaman.com/', '_blank');
+  }
+
   return (
-    <Link to="/sign-up">
-      <button type="button" className="btn">
-        Sign Up
+    <div>
+      <button type="button" className="btn" onClick={handleSignUpClick}>
+        Sign up
       </button>
-    </Link>
+    </div>
   );
 }
 

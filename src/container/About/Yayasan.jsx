@@ -31,7 +31,7 @@ const Yayasan = () => {
 
   return (
     <div className="yayasan-container">
-      <h2 className="head-text-yayasan"> yayasan <span> VICKERY CHRISTIAN ACADEMY</span></h2>
+      <h2 className="head-text-yayasan"> YAYASAN <span> VICKERY CHRISTIAN ACADEMY</span></h2>
       <section>
         <div className="app__yayasan">
           <div className="anside">

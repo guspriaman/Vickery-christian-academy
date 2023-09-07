@@ -1,6 +1,5 @@
 .m-menu {
   padding-top: 100px;
-  background: #b00707;
   width: 200px;
   position: absolute;
   top: 80px;
@@ -10,13 +9,15 @@
 }
 
 .m-menu li {
+  background: #b00707;
   border-radius: 15px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .m-menu li:hover {
   border-radius: 15px;
-  color: #a27607;
+  background: #a27607;
 }
 
 .m-menu.clicked {
