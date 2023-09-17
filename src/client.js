@@ -6,7 +6,7 @@ export const client = createClient({
   dataset: 'production',
   apiVersion: '2022-02-01',
   useCdn: true,
-  token: 'sk5X85OGbdH4HUbL2COoCE4rnsnzwf2vhCuKhpzxbR1ZYcaBdYM3hKhnQqWPwMvyNNTg9pQbIJSleU1viG0oqndMyTCCLmYskCOMtP0wR8MbZkryNPprbwc0L69r37EFX0lbgKeaLXshRhrUsFbqU2TmueJura07YE1St7RMTiQP4RwopHnI',
+  token: process.env.VICKERY_ACADEMIC_TOKEN,
 });
 
 const builder = imageUrlBuilder(client);
